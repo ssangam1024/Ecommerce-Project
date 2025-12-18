@@ -6,9 +6,9 @@ export function Header(){
             <div className="left-section">
             <NavLink to="/" className="header-link">
                 <img className="logo"
-                src="images/logo-white.png" />
+                src="../images/logo-white.png" />
                 <img className="mobile-logo"
-                src="images/mobile-logo-white.png" />
+                src="../images/mobile-logo-white.png" />
             </NavLink>
             </div>
     
