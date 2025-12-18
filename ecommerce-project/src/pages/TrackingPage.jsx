@@ -1,35 +1,36 @@
+import { Link } from 'react-router';
 import { Header } from '../assets/components/Header';
 import './Tracking.css'
 
 
-export function TrackingPage(){
-    return(
-        <> 
-        <title>Tracking Page</title>
-        <link rel="icon" type="image/svg+xml" href="../images/tracking-favicon.png" />
-        
-        <Header />
+export function TrackingPage() {
+  return (
+    <>
+      <title>Tracking Page</title>
+      <link rel="icon" type="image/svg+xml" href="../images/tracking-favicon.png" />
 
-        <div class="tracking-page">
+      <Header />
+
+      <div class="tracking-page">
         <div class="order-tracking">
           <Link class="back-to-orders-link link-primary" to="/orders">
             View all orders
           </Link>
-  
+
           <div class="delivery-date">
             Arriving on Monday, June 13
           </div>
-  
+
           <div class="product-info">
             Black and Gray Athletic Cotton Socks - 6 Pairs
           </div>
-  
+
           <div class="product-info">
             Quantity: 1
           </div>
-  
+
           <img class="product-image" src="images/products/athletic-cotton-socks-6-pairs.jpg" />
-  
+
           <div class="progress-labels-container">
             <div class="progress-label">
               Preparing
@@ -41,12 +42,12 @@ export function TrackingPage(){
               Delivered
             </div>
           </div>
-  
+
           <div class="progress-bar-container">
             <div class="progress-bar"></div>
           </div>
         </div>
-      </div> 
-      </>
-    );
+      </div>
+    </>
+  );
 }
