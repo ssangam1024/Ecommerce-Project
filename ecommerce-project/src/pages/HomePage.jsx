@@ -3,9 +3,10 @@ import {useEffect, useState} from'react';
 import { Header } from '../assets/components/Header';
 import './HomePage.css'
 
-export function HomePage() {
+
+export function HomePage({cart}) {
     const [products, setProducts ] = useState([]);
-    const [cart, setCart] = useState ([]);
+    
     useEffect(() => {
         axios.get('/api/products')
             .then((response) => {
@@ -13,18 +14,14 @@ export function HomePage() {
 
             });
 
-            axios.get('/api/cart-items')
-            .then((response)=> {
-                setCart(response.data)
-
-            })
+            
     }, [] );
    
 
     return (
         <>
             <title>Ecommerce Project</title>
-            <link rel="icon" type="image/svg+xml" href="../images/home-favicon.png" />
+            <link rel="icon" type="image/svg+xml" href="../images/icons/home-favicon.png" />
 
             <Header cart={cart} />
 
