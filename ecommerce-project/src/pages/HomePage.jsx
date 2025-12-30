@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {useEffect, useState} from'react';
 import { Header } from '../assets/components/Header';
+import { formatMoney } from './utils/money';
 import './HomePage.css'
 
 
@@ -21,7 +22,7 @@ export function HomePage({cart}) {
     return (
         <>
             <title>Ecommerce Project</title>
-            <link rel="icon" type="image/svg+xml" href="../images/icons/home-favicon.png" />
+            <link rel="icon" type="image/svg+xml" href="../../icons/home-favicon.png" />
 
             <Header cart={cart} />
 
@@ -48,7 +49,7 @@ export function HomePage({cart}) {
                                 </div>
 
                                 <div className="product-price">
-                                    ${(product.priceCents / 100).toFixed(2)}
+                                    {formatMoney(product.priceCents)}
                                 </div>
 
                                 <div className="product-quantity-container">
