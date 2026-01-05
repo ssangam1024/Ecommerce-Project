@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { CheckoutHeader } from './checkoutHeader.jsx'
+import { CheckoutHeader } from './checkoutHeader.jsx' 
 import { OrderSummary } from './OrderSummary.jsx';
 import { PaymentSummary } from './PaymentSummary.jsx';
 import './CheckoutPages.css';
@@ -29,7 +29,7 @@ export function CheckoutPage({ cart }) {
             <title>Checkout</title>
             <link rel="icon" type="image/svg+xml" href="../images/cart-favicon.png" />
 
-            <CheckoutHeader />
+            <CheckoutHeader cart={cart} />
 
             <div className="checkout-page">
                 <div className="page-title">Review your order</div>
