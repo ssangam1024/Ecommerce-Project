@@ -26,7 +26,7 @@ describe('Product component', () => {
         loadCart = vi.fn();
       });
 
-    it('displays the product details correctly'), () => {
+    it('displays the product details correctly', () => {
 
        render(< Product product={product} loadCart={loadCart} />);
 
@@ -47,22 +47,22 @@ describe('Product component', () => {
         ).toHaveAttribute('src', 'images/ratings/rating-45.png');
         
         expect (
-            screen.getByTest('87')
+            screen.getByText('87')
         ).toBeInTheDocument();
 
 
-    };
+    });
 
-    it('adds a product to the cart', async () => {
+    it('adds a product to the cart', async () => { 
         
-       render(< Product product={product} loadCart={loadCart} />);
+       render(<Product product={product} loadCart={loadCart} />);
 
        const user = userEvent.setup();
        const addToCartButton = screen.getByTestId('add-to-cart-button');
        await user.click(addToCartButton);
 
-       expect(axios.post).toHaveBeenNthCalledWith(
-        '/api/cart-items', 
+       expect(axios.post).toHaveBeenCalledWith(
+        'http://localhost:3000/api/cart-items', 
         {
             productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
             quantity: 1
@@ -71,4 +71,5 @@ describe('Product component', () => {
        expect(loadCart).toHaveBeenCalled();
 
     });
+
 });
