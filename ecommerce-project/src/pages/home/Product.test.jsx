@@ -1,8 +1,11 @@
+
 import {it, expect, describe, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import axios from 'axios';
 import { Product } from './Product';
+
+
 
 vi.mock('axios');
 
@@ -10,6 +13,7 @@ vi.mock('axios');
 describe('Product component', () => {
     let product;
     let loadCart;
+    let user;
 
       beforeEach(() => {
         product = {
@@ -24,6 +28,7 @@ describe('Product component', () => {
             keywords: ["socks", "sports", "apparel"]
         };
         loadCart = vi.fn();
+        user = userEvent.setup();
       });
 
     it('displays the product details correctly', () => {
@@ -36,7 +41,7 @@ describe('Product component', () => {
     
         expect(
           screen.getByText('$10.90')  
-        ).toBeInTheDocument();
+        ).toBeInTheDocument(); 
         
         expect(
             screen.getByTestId('product-image')
@@ -55,13 +60,13 @@ describe('Product component', () => {
 
     it('adds a product to the cart', async () => { 
         
-       render(<Product product={product} loadCart={loadCart} />);
+       render(< Product product={product} loadCart={loadCart} />);
 
-       const user = userEvent.setup();
-       const addToCartButton = screen.getByTestId('add-to-cart-button');
-       await user.click(addToCartButton);
+        
+        const addToCartButton = screen.getByTestId('add-to-cart-button');
+        await user.click(addToCartButton);
 
-       expect(axios.post).toHaveBeenCalledWith(
+        expect(axios.post).toHaveBeenCalledWith(
         'http://localhost:3000/api/cart-items', 
         {
             productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
@@ -71,5 +76,34 @@ describe('Product component', () => {
        expect(loadCart).toHaveBeenCalled();
 
     });
+    it ('selects a quantity', async () => {
+        render(< Product product={product} loadCart={loadCart} />);
+
+        const quantitySelector = screen.getByTestId('product-quantity-selector');
+        
+        expect (quantitySelector).toHaveValue('1');
+        
+
+        await user.selectOptions(quantitySelector, '3')
+
+        expect (quantitySelector).toHaveValue('3');
+
+        const addToCartButton = screen.getByTestId('add-to-cart-button');
+
+        await user.click(addToCartButton);
+
+        expect(axios.post).toHaveBeenCalledWith(
+            'http://localhost:3000/api/cart-items',
+            {
+              productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+              quantity: 3
+            }
+          );
+          expect(loadCart).toHaveBeenCalled();
+
+    })
+
+
+
 
 });
