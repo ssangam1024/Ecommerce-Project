@@ -6,7 +6,15 @@ import MobileLogoWhite from '../images/mobile-logo-white.png';
 import './Header.css'
 import { useState } from 'react';
 
-export function Header({ cart=[] }){
+type HeaderProps = {
+    cart: {
+        productId: string;
+        quantity: number;
+        deliveryOptionId: string;
+    }[];
+}
+
+export function Header({ cart=[] }: HeaderProps){
     const navigate = useNavigate();
     const [searchParams] = useSearchParams();
 
