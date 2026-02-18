@@ -5,7 +5,7 @@ import LogoWhite from '../images/logo-white.png';
 import {type Cart} from '../../types/Cart';
 import MobileLogoWhite from '../images/mobile-logo-white.png';
 import './Header.css'
-import { useState } from 'react';
+import { useState, type ChangeEvent } from 'react';
 
 
 
@@ -25,7 +25,7 @@ export function Header({ cart = [] }: HeaderProps) {
     cart.forEach((cartItem: { quantity: number }) => {
         totalQuantity += cartItem.quantity;
     });
-    const updateSearchInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const updateSearchInput = (event: ChangeEvent<HTMLInputElement>) => {
         setSearch(event.target.value);
     };
 

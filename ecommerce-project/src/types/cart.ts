@@ -3,3 +3,5 @@ export type Cart = {
     quantity: number;
     deliveryOptionId: string;
 }[];
+
+export type Loadcart= () => Promise<void>;

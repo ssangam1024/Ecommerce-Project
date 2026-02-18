@@ -1,14 +1,14 @@
 import axios from 'axios';
 import {useEffect, useState} from'react';
 import { Header } from '../../assets/components/Header';
-import {type Cart} from '../../types/Cart';
+import type{ Cart, Loadcart} from '../../types/Cart';
 import { ProductsGrid } from './ProductsGrid';
 import './HomePage.css'
 import { useSearchParams } from 'react-router';
 
 type HomePageProps = {
     cart: Cart;
-    loadCart:() => Promise<void>;
+    loadCart: Loadcart;
 }
 
 export function HomePage({cart, loadCart}: HomePageProps) {

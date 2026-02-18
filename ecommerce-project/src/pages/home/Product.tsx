@@ -1,9 +1,17 @@
 
 import axios from "axios";
-import { useState } from 'react'
+import { useState, type ChangeEvent} from 'react'
 import { formatMoney } from "../utils/money";
+import { type Product as ProductType } from "../../types/products";
+import type { Loadcart } from "../../types/Cart";
 
-export function Product({ product, loadCart }) {
+type ProductProps = {
+    product: ProductType;
+    loadCart: Loadcart
+}
+
+
+export function Product({ product, loadCart }: ProductProps) {
 
     const [quantity, setQuantity] = useState(1);
     const [showAddedMessage, setShowAddedMessage] = useState(false);
@@ -22,7 +30,7 @@ export function Product({ product, loadCart }) {
         }, 2000);
     };
 
-    const selectQuantity = (event) => {
+    const selectQuantity = (event: ChangeEvent<HTMLSelectElement>) => {
         const quantitySelected = Number(event.target.value);
         setQuantity(quantitySelected);
     }
