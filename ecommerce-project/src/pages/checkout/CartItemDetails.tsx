@@ -1,8 +1,7 @@
 import { formatMoney } from "../utils/money";
 import { useState, type ChangeEvent, type KeyboardEvent} from "react";
 import axios from "axios";
-import type { Loadcart } from "../../types/Cart";
-import type { CartItem } from "../../types/cartItem";
+import type { Loadcart, CartItem } from "../../types/Cart";
 
 
 type CartItemDetailsProps = {

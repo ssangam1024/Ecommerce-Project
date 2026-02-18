@@ -3,8 +3,15 @@ import { useState, useEffect } from 'react';
 import { CheckoutHeader } from './checkoutHeader.jsx' 
 import { OrderSummary } from './OrderSummary.js';
 import { PaymentSummary } from './PaymentSummary.js';
-import type { Cart, Loadcart } from '../../types/Cart';
+import type { Cart, Loadcart } from '../../types/Cart.js';
 import './CheckoutPages.css';
+
+// Extend the Window interface to include the axios property
+declare global {
+    interface Window {
+        axios: typeof axios;
+    }
+}
 
 window.axios= axios;
 
@@ -16,7 +23,14 @@ type CheckoutPageProps = {
 export function CheckoutPage({ cart, loadCart }: CheckoutPageProps) {
    
     const [deliveryOptions, setDeliveryOptions] = useState([]);
-    const [paymentSummary, setPaymentSummary] = useState(null);
+    const [paymentSummary, setPaymentSummary] = useState({
+        totalItems: 0,
+        productCostCents: 0,
+        shippingCostCents: 0,
+        totalCostBeforeTaxCents: 0,
+        taxCents: 0,
+        totalCostCents: 0,
+    });
 
     useEffect(() => {
         const fetchCheckoutData = async() => {
