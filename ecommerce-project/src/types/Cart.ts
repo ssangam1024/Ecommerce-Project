@@ -6,7 +6,6 @@ export type CartItem ={
     deliveryOptionId: string;
     product: Product;
 }
-
 export type Cart = CartItem[];
 
 export type Loadcart= () => Promise<void>;
