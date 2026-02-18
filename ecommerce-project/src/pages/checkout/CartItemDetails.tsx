@@ -1,8 +1,16 @@
 import { formatMoney } from "../utils/money";
-import { useState } from "react";
+import { useState, type ChangeEvent, type KeyboardEvent} from "react";
 import axios from "axios";
+import type { Loadcart } from "../../types/Cart";
+import type { CartItem } from "../../types/cartItem";
 
-export function CartItemDetails({ cartItem, loadCart}) {
+
+type CartItemDetailsProps = {
+    cartItem: CartItem;
+    loadCart: Loadcart
+
+}
+export function CartItemDetails({ cartItem, loadCart}: CartItemDetailsProps) {
 
     const [isUpdatingQuantity, setIsUpdatingQuantity] = useState(false);
 
@@ -26,11 +34,11 @@ export function CartItemDetails({ cartItem, loadCart}) {
         }
     };
 
-    const updateQuantityInput = (event) => {
-        setQuantity(event.target.value);
+    const updateQuantityInput = (event: ChangeEvent<HTMLInputElement>) => {
+        setQuantity(Number(event.target.value));
       };
     
-      const handleQuantityKeyDown = (event) =>{
+      const handleQuantityKeyDown = (event: KeyboardEvent<HTMLInputElement>) =>{
         const keyPressed = event.key;
 
         if (keyPressed === 'Enter') {
