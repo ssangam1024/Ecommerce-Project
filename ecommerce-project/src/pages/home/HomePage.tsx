@@ -1,13 +1,13 @@
 import axios from 'axios';
 import {useEffect, useState} from'react';
 import { Header } from '../../assets/components/Header';
-import type{ Cart, Loadcart} from '../../types/Cart';
+import type{ Cart as CartType, Loadcart} from '../../types/Cart';
 import { ProductsGrid } from './ProductsGrid';
 import './HomePage.css'
 import { useSearchParams } from 'react-router';
 
 type HomePageProps = {
-    cart: Cart;
+    cart: CartType;
     loadCart: Loadcart;
 }
 

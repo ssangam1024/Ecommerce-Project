@@ -2,17 +2,15 @@ import { Link, useNavigate, useSearchParams } from 'react-router';
 import CartIcon from '../images/icons/cart-icon.png';
 import SearchIcon from '../images/icons/search-icon.png';
 import LogoWhite from '../images/logo-white.png';
-import {type Cart} from '../../types/Cart';
+import type { Cart as CartType } from '../../types/Cart';
 import MobileLogoWhite from '../images/mobile-logo-white.png';
 import './Header.css'
 import { useState, type ChangeEvent } from 'react';
 
-
-
-
 type HeaderProps = {
-    cart: Cart;
-}
+    cart: CartType;
+};
+
 
 export function Header({ cart = [] }: HeaderProps) {
     const navigate = useNavigate();

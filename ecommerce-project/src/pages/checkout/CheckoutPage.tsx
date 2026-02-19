@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { CheckoutHeader } from './checkoutHeader.jsx' 
 import { OrderSummary } from './OrderSummary.js';
 import { PaymentSummary } from './PaymentSummary.js';
-import type { Cart, Loadcart } from '../../types/Cart.js';
+import type { Cart, Loadcart } from '../../types/Cart.ts';
 import './CheckoutPages.css';
 
 // Extend the Window interface to include the axios property
