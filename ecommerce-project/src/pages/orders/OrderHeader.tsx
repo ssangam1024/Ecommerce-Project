@@ -1,7 +1,12 @@
 import dayjs from "dayjs";
 import { formatMoney } from "../utils/money";
+import { type Orders } from "../../types/Orders";
 
-export function OrderHeader({ order }){
+type OrderHeaderProps = {
+    order: Orders[number];
+}
+
+export function OrderHeader({ order }: OrderHeaderProps) {
     return(
         <div className="order-header">
                             <div className="order-header-left-section">
