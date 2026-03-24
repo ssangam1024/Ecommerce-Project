@@ -135,7 +135,6 @@
     margin: 10px;
     margin-top: 50px;
     transform: skewY(3deg);
-
     
   }
   .black-section p{
@@ -297,8 +296,7 @@
     color: white;
     transform: skewY(0deg);
   }
-  .leftText p{
-    
+  .leftText p{ 
     color: #ddd;
     font-size: 0.95rem;
     line-height: 1.6;

@@ -20,7 +20,7 @@ export function ServicesPage() {
                     <p> {blackSection2.description} </p>
                 </div>
                     
-                <div className="leftText">
+                <div className="ServicesLeftText">
                     {leftText.map((item)=> (
                         <div key={item.id}>
                             <h2> {item.title} </h2>

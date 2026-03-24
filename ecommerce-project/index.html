@@ -1,19 +1,33 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!-- the browser will render(display) with moderen rules   -->
+<!doctype html> 
+<!-- tells the page is in english language -->
+<html lang="en"> 
+  <!-- The <head> tag contains metadata and configuration for the webpage that the browser uses to set up the page, and its contents are not directly visible to users. -->
+  <head> 
+    <!-- makes sure the browser reads the text correctly so letters, symbols, emojis, and other languages show properly.  -->
     <meta charset="UTF-8" />
+    <!-- <link> connects the page to external resources, rel defines the purpose, type tells the file format, and href gives the file location. -->
+    <!--  This line tells the browser which image file to use as the website’s tab icon and where to find it. -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- It lets the browser make the webpage match the device width and display the content at a normal readable zoom -->
+     <!-- we must include both name and content because the browser needs the name to know these instructions are for viewport settings. so name  = What type of information? content = The actual information-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- sets a path that the browser uses as the starting point to understand and resolve relative links(means the browser figuring out the full URL from a short path using the base or current page.).-->
     <base href="/" />
     
-    <!-- Load a font called Roboto from Google Fonts. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Preconnect(connecting early) to Google Fonts CSS server (provides font styles and helps browser to connect fastr) -->
+              <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- Preconnect to font file server (where actual font files are downloaded from)  -->
+     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  -->
+    <!-- load the Roboto font styles (CSS that tells browser which font weights to use) -->
+     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  -->
 
   </head>
+  <!-- The <body> tag contains all the visible content of the webpage that users see in the browser, such as text, images, links, buttons, and other elements. -->
   <body>
+    <!-- An empty container is created in the DOM, and React uses it for rendering the app. -->
     <div id="root"></div>
+    <!-- The script tag with type="module" tells the browser to load and run the code in main.tsx -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
