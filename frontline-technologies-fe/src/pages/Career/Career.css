@@ -1,0 +1,151 @@
+.CareerBlackSection {
+    background: #111;
+    padding: 14px 7%;  
+    color: white;   
+}
+.CareerBlackSection h2{
+    font-family: Arial;
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;    
+} 
+@media (max-width: 1100px) {
+    .CareerBlackSection h2,
+    .homeButton {
+      margin-left: 20px;
+    }
+}
+.homeButton{
+    text-decoration: none;
+    color: lightgrey;
+    cursor:pointer
+}
+.homeButton:hover {
+    color: white;
+}
+.CareerContainer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #fff;    
+}
+.CareerContainer p {
+    font-size: 1rem;
+    margin: 0 85px 1em 10%;
+    text-align: justify;
+    text-align-last: center;
+}
+@media (max-width: 600px) {
+  .CareerContainer p {
+    margin-left: 20%;
+  }
+}
+.CareerContainer h2{
+    font-size: 2rem;
+}
+.career-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 40px;
+    flex-wrap: nowrap;
+    background-color: #fff;
+  }
+  .career-image img {
+    width: 670px;
+    max-width: 100%;
+    margin-left: 90px;
+  }
+  @media (max-width: 1100px) {
+    .career-image img {
+      margin-left: 20%;
+    }
+  }
+  @media (max-width: 1000px){
+    .career-section{
+      flex-direction: column;
+      align-items: center;
+    }
+  .career-image img {
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0;
+  }
+  }
+  .career-form {
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    margin-left: 40px;
+  }
+  @media (max-width: 700px) {
+    .career-form {
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 500px){
+    .career-form{
+      width: 90%;
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
+  .career-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .form-row {
+    display: flex;
+    gap: 15px;
+  }
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+    }
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    flex: 1;
+  }
+  label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+  }
+  .career-form input,textarea {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .career-form input:focus,
+  textarea:focus {
+    border-color: #e63946; 
+  }
+  textarea {
+    resize: none;
+  }
+  .btn-submit {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .btn-submit:hover {
+    background-color: #d62828;
+  }
+  

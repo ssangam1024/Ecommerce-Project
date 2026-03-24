@@ -1,0 +1,261 @@
+.body{
+    background: rgb(27, 27, 27);
+    margin: 0;      
+    padding: 0; 
+}
+.footerTop{ 
+    width: 100%;
+    padding: 60px 0px 30px;
+    background: rgb(27, 27, 27);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-style: "Open Sans", sans-serif;    
+}
+@media (max-width: 600px) {
+    .footerTop {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+}
+.addressInfo{
+    color: white;
+    flex: 0 0 300px; 
+    min-width: 150px; 
+    max-width: 100%; 
+    margin-left: 25px;
+}
+@media (max-width: 1100px) {
+    .addressInfo{
+        flex: 0 0 280px;         
+    }
+}
+@media (max-width: 600px) {
+    .addressInfo{
+        flex: 0 0 200px;  
+        margin-left: 0px;       
+    }
+}
+.addressInfo p{ 
+    margin-left: 70px;
+    margin-top: 30px;
+    width: 200px;
+    overflow-wrap: break-word;
+    font-family:"Open Sans", sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+}
+@media (max-width: 1100px) {
+    .addressInfo p{
+        margin-left: 50px;        
+    }
+}
+@media (max-width: 600px) {
+    .addressInfo p{
+        margin-left: 15px ;
+    }
+}
+.footerTop .logoFooter{
+    margin-left: 50px;
+    width: auto;
+    height: 95px;
+    object-fit: contain;   
+    border-radius: 6%
+}
+@media (max-width: 1100px) {
+    .footerTop .logoFooter {
+        margin-left: 30px ;
+    }
+}
+@media (max-width: 600px) {
+    .footerTop .logoFooter  {
+        margin-left: 0px ; 
+    }
+}
+.container1{
+    color: white;
+    cursor: pointer;  
+    flex: 0 0 250px; 
+    line-height: 2;
+    font-family:"Open Sans", sans-serif;
+    font-size: 15px;
+    min-width: 150px; 
+    max-width: 100%; 
+}
+@media (max-width: 1100px) {
+    .container1{
+        flex: 0 0 80px;         
+    }
+}
+@media (max-width: 600px) {
+    .container1{
+        margin-left: 15px ;
+    }
+}
+.container1 a {
+    color: #AAAA; 
+    text-decoration: none;
+}
+.container1 a::before {
+    content: "> ";
+    color: white;
+    margin: 10px;
+}
+.container1 a:hover{
+    color: white;
+}
+.container1 .underline{
+    position: relative;
+    display: inline-block;
+}
+.container1 .underline::after {
+    content: "";
+    width: 20px;  
+    height: 3px;  
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;  
+}
+.container2{
+    color: white;
+    cursor: pointer;  
+    flex: 0 0 380px;
+    line-height: 2;
+    font-family:"Open Sans", sans-serif;
+    font-size: 15px;
+    min-width: 150px; 
+    max-width: 100%; 
+    margin-right: 20px;
+}
+@media (max-width: 1100px) {
+    .container2{
+        flex: 0 0 250px; 
+    }
+}
+@media (max-width: 600px) {
+    .container2{
+        margin-left: 15px ;
+        flex: 0 0 250px;
+    }
+}
+.container2 a {
+    color: #AAAA; 
+    text-decoration: none; 
+
+}
+.container2 a::before {
+    content: "> ";
+    color: white;
+    margin: 10px;
+    left: 0;    
+}
+.container2 a:hover {
+    color: white;
+}
+.container2 p{
+    line-height: 1.5;
+}
+.container2 .underline{
+    position: relative;
+    display: inline-block;
+}
+.container2 .underline::after {
+    content: "";
+    width: 20px;  
+    height: 3px;  
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;  
+}
+.searchBox{
+    gap: 0;
+    display: flex;
+}
+.searchBox input {
+    padding: 8px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0px 0px 5px ;
+    margin: 0;   
+}
+@media (max-width: 1100px) {
+    .searchBox input{
+        padding: 9px 15px;
+    }
+}  
+.searchBox button {
+    padding: 9px 25px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    margin: 0;   
+}
+@media (max-width: 1100px) {
+    .searchBox button{
+        padding: 9px 15px;
+    }
+} 
+.searchBox button:hover {
+    background: gray;
+}
+.footerBottom{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: left; 
+    background-color: black; 
+    width: 100%;
+    padding: 25px 0px;
+    box-sizing: border-box;
+    position: relative;  
+}
+.footerBottom p{
+    color: white;
+    margin-left: 120px;
+}
+@media (max-width: 600px) {
+    .footerBottom  p {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .footerBottom  {
+        justify-content: center;  
+        text-align: center;
+    }
+}
+.iconbox {
+    display: flex;
+    gap: 15px;           
+    margin-right: 55px;
+    align-items: center;
+}
+@media (max-width: 600px) {
+    .iconbox {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.icon1 {
+    width: 30px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon1:hover{
+    background: black;
+}
+.icon1 img {
+    width: 25px;
+    height: 25px;
+}

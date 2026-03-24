@@ -1,0 +1,121 @@
+.contactPageContent{
+    text-align: center;
+    font-style: Arial;
+}
+.contactPageContent h1{
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+.contactPageContent p{
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+.contactPageContent .underline{
+    position: relative;
+    display: inline-block;  
+}
+.contactPageContent .underline::after {
+    content: "";
+    width: 40%;  
+    height: 3px;  
+    background: red;
+    position: absolute;
+    bottom: -5px;  
+    left: 50%;
+    transform: translateX(-50%);   
+}
+.contact-section {
+    display: flex;
+    align-items: stretch; 
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 7%;
+    flex-wrap: wrap;
+}
+.left-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+.small-info-boxes {
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.address-form{
+    text-align: center;
+}
+.email-form,
+.call-form {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.icon img {
+    width: 40px;   
+    height: 40px;
+    object-fit: contain;
+    justify-content: center;  
+    align-content: center;  
+}
+.address-form,
+.contact-form{
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    border-radius: 8px;
+    
+}
+.contact-form {
+    flex: 1;
+    max-width: 600px;
+}
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+input,textarea {
+    padding: 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+input:focus,
+textarea:focus {
+    border-color: #e63946; 
+}
+textarea {
+    resize: none;
+}
+.btn-sendMessage {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn-sendMessage:hover {
+    background-color: #d62828;
+}
+.mapcontainer{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
